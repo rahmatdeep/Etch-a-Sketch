@@ -19,10 +19,12 @@ function populateBoard(size){
 populateBoard(16);
 
 function changeSize(input){
-  if(input>1 && input < 100){
+  if(input>=1 && input <= 100){
+    document.querySelector('.error').style.display = 'none';
     populateBoard(input);
   }
   else{
+    document.querySelector('.error').style.display = 'flex';
     console.log("Too many squares");
   }}
 
